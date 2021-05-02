@@ -1,0 +1,17 @@
+create table CLIENT_MASTER (CLIENTNO varchar(6),NAME varchar(20),CITY varchar(15),PINCODE number(6),STATE varchar(15),BALDUE number(10,2));
+insert into CLIENT_MASTER values('C00001','Ivan Bayross','Mumbai',400054,'Maharashtra',15000);
+insert into CLIENT_MASTER values('C00002','Mamta Mazumdar','Madras',780001,'Tamil Nadu',0);
+insert into CLIENT_MASTER values('C00003','Chhaya Bankar','Mumbai',400057,'Maharashtra',5000);
+insert into CLIENT_MASTER values('C00004','Ashwini Joshi','Bangalore',560001,'Karnataka',0);
+insert into CLIENT_MASTER values('C00005','Hansel Colaco','Mumbai',400060,'Maharashtra',2000);
+insert into CLIENT_MASTER values('C00006','Deepak Sharma','Mangalore',560050,'Karnataka',0);
+select distinct NAME from CLIENT_MASTER;
+select * from CLIENT_MASTER;
+select NAME,CITY,STATE from CLIENT_MASTER;
+select * from CLIENT_MASTER where CITY='Mumbai';
+select NAME from CLIENT_MASTER where BALDUE=15000;
+update CLIENT_MASTER set CITY = 'Bangalore' where CLIENTNO = 'C00005';
+update CLIENT_MASTER set BALDUE = 1000 where CLIENTNO = 'C00001';
+update CLIENT_MASTER set CITY ='Pune';
+delete from CLIENT_MASTER where STATE='Tamil Nadu';
+delete from CLIENT_MASTER;
